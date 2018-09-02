@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="fas fa-paw"></i>  {{title}}</a>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <form class="form-inline my-2 my-lg-0" style="width: 100%">
+          <input #filter type="search" id="inputField" class="form-control" (keyup)="filterTypedHandler(filter.value)" style="width:100%" placeholder="Buscar..."/>
+        </form>
+    </div>
+    <header class="header clearfix">
+      <button type="button" id="toggleMenu" class="toggle_menu" style="color:white">
+        <i class="fa fa-bars"></i>
+      </button>
+    </header>
+  </div>
+</nav>

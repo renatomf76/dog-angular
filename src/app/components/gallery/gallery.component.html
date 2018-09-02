@@ -1,0 +1,16 @@
+<div *ngIf="!busy">
+  <div *ngFor="let image of images;" class="card">
+      <a href={{image}} data-toggle="lightbox" data-title="Dog Title" data-footer="Image Description">
+        <img width="205" height="155"  class="card-img-top" src={{image}} alt="Loading image" />
+      </a>
+      <div *ngIf="!busy" style="padding:0.5rem 0.5rem 0.5rem;">
+          <i (click)="removeImage(image)" class="fas fa-times" style="float:right;font-size:18px;color:red;cursor:pointer"></i>
+          <a href={{image}} data-toggle="lightbox" data-title="Dog Title" data-footer="Image Description">
+              <i class="far fa-edit" style="float:right;margin-right:4px;color:rgb(0, 153, 255)"></i>
+          </a>
+      </div>
+  </div>
+</div>
+<div *ngIf="busy">
+  <img class="loading" src="../../../assets/loading.gif" alt="loading" />
+</div>
